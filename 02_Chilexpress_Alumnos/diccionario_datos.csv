@@ -1,0 +1,86 @@
+archivo,campo,tipo_esperado,definicion,unidad,obligatorio_para_KPI,clave,nulos_validos
+datos/dimensiones/destinos.csv,destino_id,identificador,Clave de zona ficticia hacia destinos.,ver definición del campo,True,True,no previstos en origen salvo defectos de calidad
+datos/dimensiones/destinos.csv,zona,object,Nombre ficticio del destino.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/destinos.csv,region,object,"Región utilizada para la segmentación, sin identificar clientes.",ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/destinos.csv,tipo_zona,object,urbana o rural; factor de segmentación operacional.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/sla.csv,destino_id,identificador,Clave de zona ficticia hacia destinos.,ver definición del campo,True,True,no previstos en origen salvo defectos de calidad
+datos/dimensiones/sla.csv,servicio,object,"Nivel sintético de servicio: estandar, express. Las promesas son docentes, no condiciones comerciales reales.",ver definición del campo,True,True,no previstos en origen salvo defectos de calidad
+datos/dimensiones/sla.csv,sla_horas,numérico,Plazo docente de referencia en horas corridas por destino y servicio.,horas corridas,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,destino_id,identificador,Clave de zona ficticia hacia destinos.,ver definición del campo,True,True,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,indicador,object,Nombre del indicador cuya meta aparece en las columnas mensuales.,ver definición del campo,False,True,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,unidad,object,Unidad de la meta o umbral.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,sentido,object,maximo indica límite superior; minimo indica piso deseado. Todos son supuestos docentes.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,m2025_01,numérico,Meta docente para m2025 01,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,m2025_02,numérico,Meta docente para m2025 02,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,m2025_03,numérico,Meta docente para m2025 03,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,m2025_04,numérico,Meta docente para m2025 04,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,m2025_05,numérico,Meta docente para m2025 05,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,m2025_06,numérico,Meta docente para m2025 06,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/dimensiones/metas_ancho.csv,m2025_07,numérico,Meta docente para m2025 07,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,envio_id,identificador,Identificador sintético único de envío; no es una orden de transporte real.,ver definición del campo,True,True,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,fecha,fecha UTC,Instante de referencia de la observación en UTC. En Entel es el último instante del mes; en Aguas es el inicio de la hora; en ventas y envíos es la fecha de la operación.,ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,destino_id,identificador,Clave de zona ficticia hacia destinos.,ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,servicio,object,"Nivel sintético de servicio: estandar, express. Las promesas son docentes, no condiciones comerciales reales.",ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,estado,object,"Estado al corte: entregado, en_transito o cancelado.",ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,compromiso,fecha UTC,"Fecha y hora UTC prometida en la simulación, expresada en horas corridas.",ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,entrega,fecha UTC,Fecha y hora UTC efectiva; vacío estructural para en_transito y cancelado. En entregado debería existir.,ver definición del campo,False,False,solo entrega cuando estado distinto de entregado
+datos/base/envios.csv,peso_kg,numérico,"Peso del envío en kilogramos, positivo.",kg,True,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,distancia_km,numérico,"Distancia aproximada simulada del trayecto, en kilómetros.",km,False,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,intentos,numérico,Intentos de entrega registrados hasta el corte; cero es válido para cancelados.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,tarifa_clp,numérico,Ingreso nominal del envío sin IVA; cero para cancelaciones en este modelo.,CLP nominal sin IVA,True,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,costo_operacion_clp,numérico,"Costo operacional nominal simulado, sin IVA, cero para cancelados.",CLP nominal sin IVA,True,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,reclamo,numérico,Indicador 0/1 de reclamo registrado; no prueba una causa del retraso.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/base/envios.csv,cargado_en,fecha UTC,Instante UTC de primera carga de la observación al repositorio. Permite medir latencia frente a fecha. No es la fecha del último cambio de estado ni la antigüedad del archivo frente a hoy.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,envio_id,identificador,Identificador sintético único de envío; no es una orden de transporte real.,ver definición del campo,True,True,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,fecha,fecha UTC,Instante de referencia de la observación en UTC. En Entel es el último instante del mes; en Aguas es el inicio de la hora; en ventas y envíos es la fecha de la operación.,ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,destino_id,identificador,Clave de zona ficticia hacia destinos.,ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,servicio,object,"Nivel sintético de servicio: estandar, express. Las promesas son docentes, no condiciones comerciales reales.",ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,estado,object,"Estado al corte: entregado, en_transito o cancelado.",ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,compromiso,fecha UTC,"Fecha y hora UTC prometida en la simulación, expresada en horas corridas.",ver definición del campo,True,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,entrega,fecha UTC,Fecha y hora UTC efectiva; vacío estructural para en_transito y cancelado. En entregado debería existir.,ver definición del campo,False,False,solo entrega cuando estado distinto de entregado
+datos/actualizacion/envios.csv,peso_kg,numérico,"Peso del envío en kilogramos, positivo.",kg,True,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,distancia_km,numérico,"Distancia aproximada simulada del trayecto, en kilómetros.",km,False,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,intentos,numérico,Intentos de entrega registrados hasta el corte; cero es válido para cancelados.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,tarifa_clp,numérico,Ingreso nominal del envío sin IVA; cero para cancelaciones en este modelo.,CLP nominal sin IVA,True,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,costo_operacion_clp,numérico,"Costo operacional nominal simulado, sin IVA, cero para cancelados.",CLP nominal sin IVA,True,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,reclamo,numérico,Indicador 0/1 de reclamo registrado; no prueba una causa del retraso.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/actualizacion/envios.csv,cargado_en,fecha UTC,Instante UTC de primera carga de la observación al repositorio. Permite medir latencia frente a fecha. No es la fecha del último cambio de estado ni la antigüedad del archivo frente a hoy.,ver definición del campo,False,False,no previstos en origen salvo defectos de calidad
+datos/ampliacion/envios.csv,envio_id,identificador,Identificador sintético único de envío; no es una orden de transporte real.,ver definición,True,True,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,fecha,fecha UTC,Instante de referencia de la observación en UTC. En Entel es el último instante del mes; en Aguas es el inicio de la hora; en ventas y envíos es la fecha de la operación.,ver definición,True,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,destino_id,identificador,Clave de zona ficticia hacia destinos.,ver definición,True,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,servicio,object,"Nivel sintético de servicio: estandar, express. Las promesas son docentes, no condiciones comerciales reales.",ver definición,True,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,estado,object,"Estado al corte: entregado, en_transito o cancelado.",ver definición,True,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,compromiso,fecha UTC,"Fecha y hora UTC prometida en la simulación, expresada en horas corridas.",ver definición,True,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,entrega,fecha UTC,Fecha y hora UTC efectiva; vacío estructural para en_transito y cancelado. En entregado debería existir.,ver definición,False,False,entrega nula si estado no entregado; otras ausencias requieren tratamiento
+datos/ampliacion/envios.csv,peso_kg,object,"Peso del envío en kilogramos, positivo.",ver definición,True,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,distancia_km,float64,"Distancia aproximada simulada del trayecto, en kilómetros.",ver definición,False,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,intentos,int64,Intentos de entrega registrados hasta el corte; cero es válido para cancelados.,ver definición,False,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,tarifa_clp,int64,Ingreso nominal del envío sin IVA; cero para cancelaciones en este modelo.,CLP sin IVA,True,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,costo_operacion_clp,int64,"Costo operacional nominal simulado, sin IVA, cero para cancelados.",CLP sin IVA,True,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,reclamo,int64,Indicador 0/1 de reclamo registrado; no prueba una causa del retraso.,ver definición,False,False,no previstos salvo defectos de calidad
+datos/ampliacion/envios.csv,cargado_en,fecha UTC,Instante UTC de primera carga de la observación al repositorio. Permite medir latencia frente a fecha. No es la fecha del último cambio de estado ni la antigüedad del archivo frente a hoy.,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/eventos_envio.csv,evento_id,identificador,Identificador único de evento logístico; no es una clave de envío.,identificador,False,True,no previstos salvo defectos de calidad
+datos/complementarios/eventos_envio.csv,envio_id,identificador,Identificador sintético único de envío; no es una orden de transporte real.,ver definición,True,False,no previstos salvo defectos de calidad
+datos/complementarios/eventos_envio.csv,tipo_evento,object,"Recepcion, entrega, cancelacion o ultimo_control. Un control no equivale a entrega.",categoría,False,False,no previstos salvo defectos de calidad
+datos/complementarios/eventos_envio.csv,instante,fecha UTC,"Instante UTC del evento, independiente de la primera carga del hecho.",fecha UTC,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,destino_id,identificador,Clave de zona ficticia hacia destinos.,ver definición,True,True,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,indicador,object,Nombre del indicador cuya meta aparece en las columnas mensuales.,ver definición,False,True,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,unidad,object,Unidad de la meta o umbral.,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,sentido,object,maximo indica límite superior; minimo indica piso deseado. Todos son supuestos docentes.,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_01,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_02,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_03,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_04,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_05,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_06,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_07,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_08,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_09,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_10,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_11,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/metas_2025_ancho.csv,m2025_12,int64,Meta mensual docente,ver definición,False,False,no previstos salvo defectos de calidad
+datos/complementarios/sla_historial.csv,destino_id,identificador,Clave de zona ficticia hacia destinos.,ver definición,True,True,no previstos salvo defectos de calidad
+datos/complementarios/sla_historial.csv,servicio,object,"Nivel sintético de servicio: estandar, express. Las promesas son docentes, no condiciones comerciales reales.",ver definición,True,True,no previstos salvo defectos de calidad
+datos/complementarios/sla_historial.csv,vigente_desde,fecha UTC,Inicio inclusivo UTC de vigencia de esta versión del catálogo.,fecha UTC,False,True,no previstos salvo defectos de calidad
+datos/complementarios/sla_historial.csv,vigente_hasta,fecha UTC,Fin exclusivo UTC de vigencia; exige una única versión para la fecha de negocio.,fecha UTC,False,False,no previstos salvo defectos de calidad
+datos/complementarios/sla_historial.csv,sla_horas_vigente,int64,"Plazo docente aplicable al destino, servicio y fecha de despacho.",horas corridas,False,False,no previstos salvo defectos de calidad

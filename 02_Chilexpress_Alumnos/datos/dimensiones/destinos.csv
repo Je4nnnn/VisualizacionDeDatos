@@ -1,0 +1,25 @@
+destino_id,zona,region,tipo_zona
+C-D00,Zona docente 1,Metropolitana,urbana
+C-D01,Zona docente 2,Metropolitana,urbana
+C-D02,Zona docente 3,Metropolitana,urbana
+C-D03,Zona docente 4,Metropolitana,rural
+C-D04,Zona docente 5,Valparaiso,urbana
+C-D05,Zona docente 6,Valparaiso,urbana
+C-D06,Zona docente 7,Valparaiso,urbana
+C-D07,Zona docente 8,Valparaiso,rural
+C-D08,Zona docente 9,Biobio,urbana
+C-D09,Zona docente 10,Biobio,urbana
+C-D10,Zona docente 11,Biobio,urbana
+C-D11,Zona docente 12,Biobio,rural
+C-D12,Zona docente 13,Antofagasta,urbana
+C-D13,Zona docente 14,Antofagasta,urbana
+C-D14,Zona docente 15,Antofagasta,urbana
+C-D15,Zona docente 16,Antofagasta,rural
+C-D16,Zona docente 17,Maule,urbana
+C-D17,Zona docente 18,Maule,urbana
+C-D18,Zona docente 19,Maule,urbana
+C-D19,Zona docente 20,Maule,rural
+C-D20,Zona docente 21,Los Lagos,urbana
+C-D21,Zona docente 22,Los Lagos,urbana
+C-D22,Zona docente 23,Los Lagos,urbana
+C-D23,Zona docente 24,Los Lagos,rural

@@ -1,0 +1,13 @@
+{
+  "hashes_originales": true,
+  "filas_fisicas": 240700,
+  "entidades": 240000,
+  "copias_exactas": 700,
+  "eventos": 200000,
+  "eventos_por_envio": 2,
+  "union_eventos_sin_expansion": true,
+  "coincidencia_sla_maxima": 1,
+  "sla_sin_coincidencia": 920,
+  "turnos": 10,
+  "graficos": 6
+}

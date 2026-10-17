@@ -1,0 +1,10 @@
+﻿archivo,filas,columnas,clave,claves_distintas,granularidad,sha256,procedencia
+datos/actualizacion/envios.csv,20100,14,envio_id,20000,envío al corte de su lote,2bce78f84e9b3d868d74ad1f49b694b6566b627bf986a24a96782de021ab7868,Paquete docente local; datos sintéticos
+datos/ampliacion/envios.csv,100000,14,envio_id,100000,envío al corte de su lote,3b5ce20a3945808ca33ee19df0eefd7c678221ebcb32b41ef348021ff5afaa38,Paquete docente local; datos sintéticos
+datos/base/envios.csv,120600,14,envio_id,120000,envío al corte de su lote,a61a4ef078bbea93d14de7ca238512ccd7992a96502927ecdf76b9b21cf3c27b,Paquete docente local; datos sintéticos
+datos/complementarios/eventos_envio.csv,200000,4,evento_id,200000,"evento logístico, dos por envío nuevo",1ade7b4efb872a585b75ff518c62322b3f3e21af7ea9154812b84887a02079ee,Paquete docente local; datos sintéticos
+datos/complementarios/metas_2025_ancho.csv,24,16,destino_id/indicador,24,destino/indicador con meses en columnas,fd2353a7e3ca696b5e72d7ea8983b58a0c8a2eff6be276d9fd79f931e48b3d6b,Paquete docente local; datos sintéticos
+datos/complementarios/sla_historial.csv,96,5,destino_id/servicio/vigente_desde,96,versión temporal destino/servicio,116fc56b6fb3e2f91d586b17474d39c53f3ed2ed2488b5f02f53afa08d5a6459,Paquete docente local; datos sintéticos
+datos/dimensiones/destinos.csv,24,4,destino_id,24,destino,10ed7531914d4c6a4986c63322068db68b982b15574d7cef33b08973269f2980,Paquete docente local; datos sintéticos
+datos/dimensiones/metas_ancho.csv,24,11,destino_id/indicador,24,destino/indicador con meses en columnas,04e996c1e21dbafdbad0e7b04a8e894a763de2cfff16d6be6279289cb2d02268,Paquete docente local; datos sintéticos
+datos/dimensiones/sla.csv,48,3,destino_id/servicio,48,destino/servicio estático,1378c182e5fd0f499ecb87e38801a3354d7bfc88e475d0643fccde401e98dac7,Paquete docente local; datos sintéticos

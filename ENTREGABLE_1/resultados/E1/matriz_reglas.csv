@@ -1,0 +1,11 @@
+﻿regla_id,tabla,campo,condicion,severidad,denominador,filas_evaluadas,filas_fallidas,tratamiento,justificacion,impacto_KPI
+Q1,envios,peso_kg,Completitud peso,alta,entidades únicas,240000,3850,Conservar nulo; no imputar,Sesgo de peso y costo rural,Sesgo de peso y costo rural
+Q2,envios,entrega,Entrega obligatoria,alta,entregados,229418,350,Desconocido; contrastar eventos sin sobrescribir,Cumplimiento y atraso,Cumplimiento y atraso
+Q3,envios,entrega,Consistencia temporal,alta,entregados con fecha,229068,350,Excluir del atraso; conservar evidencia,Cumplimiento y atraso,Cumplimiento y atraso
+Q4,envios,destino_id,Integridad referencial,alta,entidades únicas,240000,580,Cuarentena para rankings,Segmentación y capacidad,Segmentación y capacidad
+Q5,envios,cargado_en,Carga dentro de 0–48 h,alta,entidades únicas,240000,37776,Investigar latencia; no comparar con hoy,Oportunidad del diagnóstico,Oportunidad del diagnóstico
+Q6,envios,sla_horas_vigente,Cobertura SLA histórico,alta,entidades únicas,240000,920,No sustituir por SLA estático,Comparabilidad de promesas,Comparabilidad de promesas
+DUP,envios,envio_id,Copias exactas,alta,filas físicas,240700,700,Deduplicar las 14 columnas dentro de cada lote,Evitar doble conteo,Todos los agregados
+FECHA,envios,fecha,Valor inválido o formato no canónico,alta,entidades únicas,240000,340,Cuarentena temporal; no inventar día,Exposición y series temporales,Exposición y series temporales
+PESO,envios,peso_kg,Valor inválido o formato no canónico,alta,entidades únicas,240000,960,Excluir peso inválido de relaciones físicas; conservar envío,Peso/costo,Peso/costo
+SERVICIO,envios,servicio,Valor inválido o formato no canónico,alta,entidades únicas,240000,1500,Normalizar espacios y mayúsculas; registrar original,Segmentos y cobertura SLA,Segmentos y cobertura SLA

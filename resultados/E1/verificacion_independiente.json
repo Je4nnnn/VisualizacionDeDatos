@@ -1,0 +1,13 @@
+{
+  "recalculo_independiente": {
+    "entidades": 240000,
+    "expuestos": 233657,
+    "evaluados": 232957,
+    "incumplimientos": 40100,
+    "desconocidos": 700
+  },
+  "coincidencia": true,
+  "fuentes_preservadas": 21,
+  "paginas_pdf": 5,
+  "notebook_ejecutado_sin_errores": true
+}

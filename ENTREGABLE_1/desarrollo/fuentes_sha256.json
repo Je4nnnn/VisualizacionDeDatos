@@ -1,0 +1,23 @@
+{
+  "Chilexpress_E1_Diagnostico.docx.pdf": "e2b80b792836584dd5856816230dd0e1d80718966aa324f58c2e8b41ae5a56e4",
+  "02_Chilexpress_Alumnos\\00_Enunciado_general.docx": "96b21a7d3fb510a8103e19aacfaa06f3d7438f8ffc36853d66580dc344b9250d",
+  "02_Chilexpress_Alumnos\\00_inicio.ipynb": "0d56789ebd1c3301a24c6f023ca4c42fbfd0ff3c570c0b1d2abb635ab61f7252",
+  "02_Chilexpress_Alumnos\\diccionario_datos.csv": "33f4d2912f09e0c30bf620b6fa3364acda75427950fd830c7801d22a30b0a4d1",
+  "02_Chilexpress_Alumnos\\metadatos.json": "5aa6d74fa6f9f5ddd8168240a69f1dd4c468c65dbf1f6f2a838620c26f7dd573",
+  "02_Chilexpress_Alumnos\\plantilla_bitacora.csv": "9e96c2e25599220d3594ae47a613d7d2763649ad62edd370d2a7e535855a841d",
+  "02_Chilexpress_Alumnos\\plantilla_fichas_indicadores.csv": "57fb1e1e5e6dde184d8e319145bc9d13d467f292c6b88000870ed6e9865238bf",
+  "02_Chilexpress_Alumnos\\plantilla_pruebas_usuarios.csv": "667b37c946eb1c945cf9db9a523214015e27ca5cf54a1ce9a111c4112be1a519",
+  "02_Chilexpress_Alumnos\\plantilla_reglas_calidad.csv": "0e2870dcd26e09288e4d42f65872f0e531400872c673cdce8abb46a20275bbdd",
+  "02_Chilexpress_Alumnos\\README.md": "982ebf3011c88889e0bf17f24de366e2136bcb0041b967aaac42daecb54462c3",
+  "02_Chilexpress_Alumnos\\requirements.txt": "b93f4c13a226dd0e5843b3b6ed7dab9cc90166eb9bf0d5300e70242abd07c33d",
+  "02_Chilexpress_Alumnos\\trazabilidad_curso.csv": "15c91dc84f94262471853919d4471fbdac3bab555c5980366f22b93709102a8b",
+  "02_Chilexpress_Alumnos\\datos\\actualizacion\\envios.csv": "2bce78f84e9b3d868d74ad1f49b694b6566b627bf986a24a96782de021ab7868",
+  "02_Chilexpress_Alumnos\\datos\\ampliacion\\envios.csv": "3b5ce20a3945808ca33ee19df0eefd7c678221ebcb32b41ef348021ff5afaa38",
+  "02_Chilexpress_Alumnos\\datos\\base\\envios.csv": "a61a4ef078bbea93d14de7ca238512ccd7992a96502927ecdf76b9b21cf3c27b",
+  "02_Chilexpress_Alumnos\\datos\\complementarios\\eventos_envio.csv": "1ade7b4efb872a585b75ff518c62322b3f3e21af7ea9154812b84887a02079ee",
+  "02_Chilexpress_Alumnos\\datos\\complementarios\\metas_2025_ancho.csv": "fd2353a7e3ca696b5e72d7ea8983b58a0c8a2eff6be276d9fd79f931e48b3d6b",
+  "02_Chilexpress_Alumnos\\datos\\complementarios\\sla_historial.csv": "116fc56b6fb3e2f91d586b17474d39c53f3ed2ed2488b5f02f53afa08d5a6459",
+  "02_Chilexpress_Alumnos\\datos\\dimensiones\\destinos.csv": "10ed7531914d4c6a4986c63322068db68b982b15574d7cef33b08973269f2980",
+  "02_Chilexpress_Alumnos\\datos\\dimensiones\\metas_ancho.csv": "04e996c1e21dbafdbad0e7b04a8e894a763de2cfff16d6be6279289cb2d02268",
+  "02_Chilexpress_Alumnos\\datos\\dimensiones\\sla.csv": "1378c182e5fd0f499ecb87e38801a3354d7bfc88e475d0643fccde401e98dac7"
+}

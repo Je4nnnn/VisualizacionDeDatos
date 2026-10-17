@@ -1,0 +1,62 @@
+Chilexpress cumplimiento y capacidad de reparto
+Profesor Viktor Tapia
+Desarrolle este caso en un equipo de tres integrantes. Debe convertir datos imperfectos en una recomendación verificable mediante Python, indicadores y un dashboard. Las empresas son reales; datos, instalaciones, encargos, metas y resultados de estos ejercicios son simulados.
+Decisión y alcance
+Distribuir diez turnos adicionales semanales entre dos zonas para un piloto docente. La selección debe equilibrar volumen vencido, cumplimiento, costo y ruralidad. La mejora esperada requiere un piloto; no se deduce causalmente del historial.
+Cada fila principal representa un envío al corte de su lote. Se añaden 100.000 envíos de agosto a diciembre. El detalle de eventos nuevo contiene recepción y un evento posterior por envío; no es otra tabla de envíos para sumar.
+Datos y cortes
+Lote principal
+Filas
+Período y corte UTC
+Base original
+120600
+Enero a junio · 8 de julio de 2025
+Actualización original
+20100
+Julio · 8 de agosto de 2025
+Ampliación
+100000
+Agosto a diciembre · 8 de enero de 2026
+Total
+240700
+Incluye copias exactas originales
+
+Las 100.000 filas nuevas tienen claves principales distintas de las originales. Las tablas complementarias se suman a ese volumen. Los archivos originales no se modificaron. Use los tres lotes desde E1; E4 verifica reingesta y un cambio de reglas, no un lote secreto.
+Los estados históricos no se actualizan retroactivamente. Cada lote conserva su fecha de corte. Las tablas complementarias de operación cubren agosto a diciembre; una ausencia de cobertura previa no equivale a cero actividad.
+
+Modelo de datos y evaluación
+destinos
+N:1 por destino_id para región y ruralidad.
+sla historial
+Destino, servicio y fecha de despacho dentro de la vigencia. El plazo rural cambia desde octubre. Usar sla_horas_vigente; no aplicar el catálogo estático de enero a todo el año.
+eventos envio
+Dos eventos por envío nuevo. Agregar o pivotear antes de unir al hecho; nunca sumar costos tras una expansión 1:N.
+metas 2025 ancho
+Destino, indicador y mes tras melt. Todas las metas son docentes.
+Entrega
+Semana
+Peso curso
+Modalidad
+E1 Diagnóstico
+4
+10%
+Equipo
+E2 Preparación
+8
+15%
+Equipo
+E3 Dashboard
+14
+25%
+Equipo
+E4 Defensa
+15 a 16
+10%
+Individual
+
+E1 a E4 suman 60% del curso. Se mantienen controles de lectura 20% y certamen práctico 20%. Las fechas definitivas se publican en el aula virtual. Los cuatro documentos de la carpeta entregas contienen instrucciones y rúbricas específicas.
+Archivos de trabajo
+Lea diccionario_datos.csv y metadatos.json. Abra 00_inicio.ipynb desde esta carpeta. Conserve originales; registre políticas, exclusiones y dependencias. Cada equipo entrega un solo caso. No se requiere entrenar modelos predictivos.
+Referencias
+Contexto público: https://www.chilexpress.cl/
+Método: pandas (uniones y datos ausentes), Wickham (2014), Tidy Data, y Munzner (2014). Enlaces completos en README.md; métodos revisados el 1 de octubre de 2026.

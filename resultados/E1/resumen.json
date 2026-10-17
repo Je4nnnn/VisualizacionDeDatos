@@ -1,0 +1,13 @@
+{
+  "entidades": 240000,
+  "expuestos": 233657,
+  "evaluados": 232957,
+  "incumplimientos": 40100,
+  "desconocidos": 700,
+  "cumplimiento_pct": 82.78652283468622,
+  "atraso_media_h": 46.51449939020697,
+  "atraso_p90_h": 47.29561111111111,
+  "costo_medio_clp": 4670.662373017535,
+  "reclamos_pct": 7.635829034698212,
+  "rho_peso_costo": 0.4614161928912634
+}

@@ -1,0 +1,158 @@
+{
+  "empresa": "Chilexpress",
+  "tema": "Cumplimiento de entregas y costo operacional",
+  "main": "envios",
+  "pk": "envio_id",
+  "date": "fecha",
+  "fk": "destino_id",
+  "dim": "destinos",
+  "cat": "servicio",
+  "num": "peso_kg",
+  "critical": [
+    "envio_id",
+    "fecha",
+    "destino_id",
+    "servicio",
+    "estado",
+    "compromiso",
+    "peso_kg",
+    "costo_operacion_clp",
+    "tarifa_clp"
+  ],
+  "latency": 48,
+  "source": "https://www.chilexpress.cl/",
+  "advertencia": "Datos 100% sintéticos para docencia. Empresas reales utilizadas solo como contexto. No representan sistemas, instalaciones, clientes, metas, incidentes ni resultados reales.",
+  "semilla": 20260922,
+  "encoding": "UTF-8",
+  "separador": ",",
+  "decimal": ".",
+  "nulos": "campo vacío",
+  "zona_horaria": "UTC",
+  "base_inicio": "2025-01-01",
+  "base_fin": "2025-06-30",
+  "corte_base": "2025-07-08T00:00:00Z",
+  "corte_actualizacion": "2025-08-08T00:00:00Z",
+  "files": [
+    {
+      "archivo": "datos/actualizacion/envios.csv",
+      "filas": 20100,
+      "columnas": 14,
+      "sha256": "2bce78f84e9b3d868d74ad1f49b694b6566b627bf986a24a96782de021ab7868"
+    },
+    {
+      "archivo": "datos/ampliacion/envios.csv",
+      "filas": 100000,
+      "columnas": 14,
+      "sha256": "3b5ce20a3945808ca33ee19df0eefd7c678221ebcb32b41ef348021ff5afaa38"
+    },
+    {
+      "archivo": "datos/base/envios.csv",
+      "filas": 120600,
+      "columnas": 14,
+      "sha256": "a61a4ef078bbea93d14de7ca238512ccd7992a96502927ecdf76b9b21cf3c27b"
+    },
+    {
+      "archivo": "datos/complementarios/eventos_envio.csv",
+      "filas": 200000,
+      "columnas": 4,
+      "sha256": "1ade7b4efb872a585b75ff518c62322b3f3e21af7ea9154812b84887a02079ee"
+    },
+    {
+      "archivo": "datos/complementarios/metas_2025_ancho.csv",
+      "filas": 24,
+      "columnas": 16,
+      "sha256": "fd2353a7e3ca696b5e72d7ea8983b58a0c8a2eff6be276d9fd79f931e48b3d6b"
+    },
+    {
+      "archivo": "datos/complementarios/sla_historial.csv",
+      "filas": 96,
+      "columnas": 5,
+      "sha256": "116fc56b6fb3e2f91d586b17474d39c53f3ed2ed2488b5f02f53afa08d5a6459"
+    },
+    {
+      "archivo": "datos/dimensiones/destinos.csv",
+      "filas": 24,
+      "columnas": 4,
+      "sha256": "10ed7531914d4c6a4986c63322068db68b982b15574d7cef33b08973269f2980"
+    },
+    {
+      "archivo": "datos/dimensiones/metas_ancho.csv",
+      "filas": 24,
+      "columnas": 11,
+      "sha256": "04e996c1e21dbafdbad0e7b04a8e894a763de2cfff16d6be6279289cb2d02268"
+    },
+    {
+      "archivo": "datos/dimensiones/sla.csv",
+      "filas": 48,
+      "columnas": 3,
+      "sha256": "1378c182e5fd0f499ecb87e38801a3354d7bfc88e475d0643fccde401e98dac7"
+    }
+  ],
+  "version_paquete": 2,
+  "ampliacion_inicio": "2025-08-01",
+  "ampliacion_fin": "2025-12-31",
+  "corte_ampliacion": "2026-01-08T00:00:00Z",
+  "semilla_ampliacion": 20261002,
+  "registros_nuevos_principales": 100000,
+  "criterio_vigencia": "desde inclusivo y hasta exclusivo; usar fecha de negocio UTC",
+  "formatos_fecha": [
+    "ISO 8601 UTC",
+    "dd/mm/YYYY HH:MM:SS interpretado UTC"
+  ],
+  "interpretacion_decimal": "Punto decimal canónico; la ampliación contiene algunos valores con coma decimal y sin separador de miles",
+  "nuevo_alcance": "Los complementarios cubren agosto a diciembre salvo catálogos históricos que declaran vigencias desde enero. No completar períodos anteriores con ceros de actividad no observada.",
+  "files_originales": [
+    {
+      "archivo": "datos/dimensiones/destinos.csv",
+      "filas": 24,
+      "columnas": 4,
+      "granularidad": "una fila por destino_id",
+      "clave_esperada": [
+        "destino_id"
+      ],
+      "sha256": "10ed7531914d4c6a4986c63322068db68b982b15574d7cef33b08973269f2980"
+    },
+    {
+      "archivo": "datos/dimensiones/sla.csv",
+      "filas": 48,
+      "columnas": 3,
+      "granularidad": "una fila por destino y servicio",
+      "clave_esperada": [
+        "destino_id",
+        "servicio"
+      ],
+      "sha256": "1378c182e5fd0f499ecb87e38801a3354d7bfc88e475d0643fccde401e98dac7"
+    },
+    {
+      "archivo": "datos/dimensiones/metas_ancho.csv",
+      "filas": 24,
+      "columnas": 11,
+      "granularidad": "una fila por unidad de gestión e indicador, meses en columnas",
+      "clave_esperada": [
+        "destino_id",
+        "indicador"
+      ],
+      "sha256": "04e996c1e21dbafdbad0e7b04a8e894a763de2cfff16d6be6279289cb2d02268"
+    },
+    {
+      "archivo": "datos/base/envios.csv",
+      "filas": 120600,
+      "columnas": 14,
+      "granularidad": "un envío",
+      "clave_esperada": [
+        "envio_id"
+      ],
+      "sha256": "a61a4ef078bbea93d14de7ca238512ccd7992a96502927ecdf76b9b21cf3c27b"
+    },
+    {
+      "archivo": "datos/actualizacion/envios.csv",
+      "filas": 20100,
+      "columnas": 14,
+      "granularidad": "un envío",
+      "clave_esperada": [
+        "envio_id"
+      ],
+      "sha256": "2bce78f84e9b3d868d74ad1f49b694b6566b627bf986a24a96782de021ab7868"
+    }
+  ]
+}

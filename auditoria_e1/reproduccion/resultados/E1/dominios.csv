@@ -1,0 +1,10 @@
+﻿campo,fallas,denominador,tratamiento
+peso_kg,960,240000,Investigar; no imputar ni eliminar filas completas
+distancia_km,0,240000,Investigar; no imputar ni eliminar filas completas
+costo_operacion_clp,0,240000,Investigar; no imputar ni eliminar filas completas
+tarifa_clp,0,240000,Investigar; no imputar ni eliminar filas completas
+intentos,0,240000,Investigar; no imputar ni eliminar filas completas
+reclamo,0,240000,Investigar; no imputar ni eliminar filas completas
+estado,0,240000,Investigar; no imputar ni eliminar filas completas
+servicio,0,240000,Investigar; no imputar ni eliminar filas completas
+compromiso,0,240000,Investigar; no imputar ni eliminar filas completas

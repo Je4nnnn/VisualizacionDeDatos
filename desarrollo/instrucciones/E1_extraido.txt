@@ -1,0 +1,375 @@
+P?GINA 1
+                 UNIVERSIDAD  DE  SANTIAGO  DE  CHILE                   DEPARTAMENTO  DE  INFORMÁTICA  
+                 
+SANTIAGO
+ 
+ 
+ 
+  
+E1  Diagnóstico  y  necesidades  
+Curso  Visualización  de  Datos  ·  Profesor  Viktor  Tapia  ·  Datos  y  metas  simulados  para  docencia.  
+Objetivo  del  diagnóstico  
+Definir  qué  decisión  debe  apoyar  el  análisis  y  qué  riesgos  de  calidad  pueden  distorsionarla.  Esta  entrega  mide  
+RA1
+ 
+e
+ 
+IL1.1
+ 
+e
+ 
+IL1.2;
+ 
+no
+ 
+requiere
+ 
+un
+ 
+dashboard
+ 
+terminado.
+ 
+Distribuir  diez  turnos  adicionales  semanales  entre  dos  zonas  para  un  piloto  docente.  La  selección  debe  equilibrar  
+volumen
+ 
+vencido,
+ 
+cumplimiento,
+ 
+costo
+ 
+y
+ 
+ruralidad.
+ 
+La
+ 
+mejora
+ 
+esperada
+ 
+requiere
+ 
+un
+ 
+piloto;
+ 
+no
+ 
+se
+ 
+deduce
+ 
+causalmente
+ 
+del
+ 
+historial.
+ 
+Trabajo  requerido  
+1.  Identificar  audiencia  ejecutiva  y  operacional,  formular  tres  preguntas  medibles  y  precisar  qué  acción  podría  
+cambiar
+ 
+con
+ 
+sus
+ 
+respuestas.
+ 
+2.  Inventariar  archivos,  filas,  claves,  granularidad,  períodos  y  fechas  de  corte.  Diferenciar  filas  físicas,  entidades  y  
+exposición.
+ 
+Registrar
+ 
+hash
+ 
+y
+ 
+procedencia.
+ 
+3.  Clasificar  variables  por  tipo,  escala,  unidad  y  nulabilidad.  Revisar  ID,  fecha  de  negocio  y  fecha  de  carga;  
+proponer
+ 
+contratos
+ 
+de
+ 
+datos.
+ 
+4.  Realizar  al  menos  seis  análisis:  distribución,  categorías,  evolución  temporal,  comparación  de  segmentos,  
+relación
+ 
+bivariada
+ 
+y
+ 
+faltantes
+ 
+por
+ 
+segmento.
+ 
+Usar
+ 
+correlación
+ 
+solo
+ 
+entre
+ 
+variables
+ 
+interpretables.
+ 
+5.  Perfilar  calidad  por  lote  y  segmento.  Diferenciar  defectos,  valores  extremos  plausibles  y  ausencias  
+estructurales.
+ 
+Estimar
+ 
+qué
+ 
+indicadores
+ 
+sufrirían
+ 
+mayor
+ 
+sesgo.
+ 
+6.  Definir  los  seis  KPI  del  caso  y  proponer  seis  métricas  de  calidad.  Explicitar  denominadores  y  escribir  al  menos  
+dos
+ 
+límites
+ 
+de
+ 
+interpretación.
+ 
+ 
+Visualización  de  Datos  ·  1  
+
+
+P?GINA 2
+                 UNIVERSIDAD  DE  SANTIAGO  DE  CHILE                   DEPARTAMENTO  DE  INFORMÁTICA  
+                 
+SANTIAGO
+ 
+ 
+ 
+  Preguntas  y  riesgos  del  caso  
+1.  Comparar  tasa  y  cantidad  de  incumplimientos  por  zona,  semana  y  servicio.  Mostrar  numeradores,  
+denominadores
+ 
+y
+ 
+tamaño
+ 
+mínimo
+ 
+de
+ 
+segmento.
+ 
+2.  Contrastar  promedio  y  percentil  90  del  atraso.  Explicar  por  qué  una  cola  larga  puede  justificar  una  prioridad  
+aunque
+ 
+la
+ 
+media
+ 
+sea
+ 
+moderada.
+ 
+3.  Comparar  destinos  dentro  del  mismo  servicio  y  ruralidad.  Separar  efecto  de  mezcla  del  deterioro  operacional  y  
+revisar
+ 
+el
+ 
+cambio
+ 
+de
+ 
+SLA
+ 
+en
+ 
+octubre.
+ 
+4.  Asignar  los  diez  turnos  entre  dos  zonas  con  una  regla  explícita,  contrastar  dos  rankings  y  proponer  cómo  medir  
+el
+ 
+piloto.
+ 
+Situaciones  que  deben  diagnosticarse  
+1.  Fecha  de  entrega  anterior  al  despacho  y  estado  entregado  con  fecha  ausente.  La  fecha  vacía  sí  es  estructural  
+para
+ 
+cancelado
+ 
+o
+ 
+en_transito.
+ 
+2.  Faltantes  concentrados  en  destinos  rurales  y  diferencias  de  servicio.  El  promedio  general  puede  ocultar  
+cambios
+ 
+de
+ 
+composición.
+ 
+3.  Envíos  vencidos  todavía  en  tránsito:  son  incumplimientos.  Cancelados  y  promesas  todavía  no  vencidas  
+requieren
+ 
+poblaciones
+ 
+separadas.
+ 
+No  se  espera  conocer  los  valores  verdaderos  de  los  campos  dañados.  Toda  recuperación  necesita  evidencia  
+disponible.
+ 
+Las
+ 
+correlaciones
+ 
+describen
+ 
+asociación;
+ 
+no
+ 
+demuestran
+ 
+el
+ 
+efecto
+ 
+de
+ 
+una
+ 
+campaña,
+ 
+un
+ 
+refuerzo
+ 
+o
+ 
+una
+ 
+falla.
+ 
+ 
+Visualización  de  Datos  ·  2  
+
+
+P?GINA 3
+                 UNIVERSIDAD  DE  SANTIAGO  DE  CHILE                   DEPARTAMENTO  DE  INFORMÁTICA  
+                 
+SANTIAGO
+ 
+ 
+ 
+  Productos  y  evaluación  
+1.  Notebook  E1_diagnostico.ipynb  ejecutado  desde  cero  con  los  tres  lotes  y  las  tablas  complementarias.  
+2.  Diagnostico.pdf  de  hasta  5  páginas,  con  audiencia,  decisión,  hallazgos,  límites  y  plan  de  limpieza.  
+3.  Diccionario  revisado,  perfil_calidad.csv  y  matriz_reglas.csv  con  campo,  regla,  severidad,  denominador,  
+tratamiento
+ 
+propuesto
+ 
+y
+ 
+justificación.
+ 
+4.  Fichas  preliminares  de  los  seis  KPI  y  seis  métricas  de  calidad;  trazabilidad  a  las  columnas,  poblaciones  y  
+decisiones.
+ 
+Rúbrica  de  evaluación  
+Criterio  Puntos  Evidencia  para  puntaje  completo  
+Audiencia  y  preguntas  25  Audiencias,  decisión  y  preguntas  medibles  conectadas  al  encargo.  
+EDA  y  granularidad  30  
+EDA  temporal  y  segmentado;  claves  y  unidades  correctas;  ceros  y  nulos  diferenciados.  
+Calidad  y  pertinencia  30  
+Seis  métricas  de  calidad,  sesgo  de  faltantes  y  reglas  justificadas  con  impacto  previsto  en  KPI.  
+Reproducibilidad  y  claridad  15  Notebook  reproducible,  diccionario,  rutas  y  límites  consistentes.  
+ Cada  criterio  se  califica  al  100%,  75%,  50%,  25%  o  0%  de  sus  puntos:  completo  y  correcto;  omisiones  menores;  
+logro
+ 
+parcial
+ 
+con
+ 
+errores
+ 
+relevantes;
+ 
+superficial;
+ 
+ausente
+ 
+o
+ 
+no
+ 
+ejecutable.
+ 
+Registrar
+ 
+el
+ 
+fundamento.
+ 
+Total
+ 
+de
+ 
+la
+ 
+entrega:
+ 
+100
+ 
+puntos.
+ 
+Aplicar
+ 
+la
+ 
+escala
+ 
+institucional
+ 
+de
+ 
+notas.
+ 
+Revisión  antes  de  entregar  
+Un  compañero  debe  poder  ejecutar  el  notebook  desde  una  sesión  nueva.  Cada  hallazgo  debe  señalar  gráfico  o  
+tabla,
+ 
+período,
+ 
+unidad,
+ 
+población
+ 
+y
+ 
+una
+ 
+limitación.
+ 
+Separar
+ 
+observación,
+ 
+hipótesis
+ 
+y
+ 
+decisión.
+ 
+Visualización  de  Datos  ·  3  

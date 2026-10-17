@@ -1,0 +1,76 @@
+{
+  "conteos": {
+    "entidades": 240000,
+    "expuestos": 233657,
+    "evaluados": 232957,
+    "incumplimientos": 40100,
+    "desconocidos": 700,
+    "cancelados": 6011,
+    "no_expuestos": 332,
+    "futuros": 0,
+    "promesa_no_determinable": 332
+  },
+  "cumplidos": 192857,
+  "desconocidos_tipo": {
+    "entrega_ausente": 350,
+    "entrega_incoherente": 350
+  },
+  "estadisticos": {
+    "cumplimiento_pct": 82.78652283468622,
+    "atraso_media_h": 46.514499390206964,
+    "atraso_p90_h": 47.29561111111111,
+    "costo_medio_clp": 4670.662373017535,
+    "reclamos_pct": 7.635829034698212,
+    "rho_peso_costo": 0.4614161928912652
+  },
+  "costo_n": 233989,
+  "reclamos_n": 233989,
+  "reclamos": 17867,
+  "pares_n": 229308,
+  "sensibilidad_pct": [
+    82.53850729916074,
+    82.83809173275357
+  ],
+  "tablas": {
+    "bitacora_normalizacion.csv": "PASS",
+    "cambio_sla.csv": "PASS",
+    "categorias.csv": "PASS",
+    "comparacion_metas.csv": "PASS",
+    "comparacion_mismo_servicio_ruralidad.csv": "PASS",
+    "correlacion.csv": "PASS",
+    "diccionario_revisado.csv": "PASS",
+    "distribuciones.csv": "PASS",
+    "dominios.csv": "PASS",
+    "eventos_resumen.csv": "PASS",
+    "evidencia_eventos.csv": "PASS",
+    "evolucion_mes.csv": "PASS",
+    "faltantes_segmento.csv": "PASS",
+    "fichas_indicadores.csv": "PASS",
+    "inventario.csv": "PASS",
+    "lotes.csv": "PASS",
+    "matriz_reglas.csv": "PASS",
+    "metas_tidy.csv": "PASS",
+    "nulos_campos_segmento.csv": "PASS",
+    "perfil_calidad.csv": "PASS",
+    "periodos_observados.csv": "PASS",
+    "poblaciones.csv": "PASS",
+    "ranking_estandarizado.csv": "PASS",
+    "ranking_turnos.csv": "PASS",
+    "segmentos_mes.csv": "PASS",
+    "servicios_originales.csv": "PASS",
+    "zonas_incluyendo_no_identificados.csv": "PASS",
+    "zona_semana_servicio.csv": "PASS"
+  },
+  "figuras_identicas": {
+    "01_distribucion.png": true,
+    "02_categorias.png": true,
+    "03_temporal.png": true,
+    "04_segmentos.png": true,
+    "05_bivariado.png": true,
+    "06_faltantes.png": true
+  },
+  "pdf_paginas": 5,
+  "pdf_texto_reproducido": true,
+  "notebook_nuevo_kernel": true,
+  "archivos_previos_preservados": 105
+}
